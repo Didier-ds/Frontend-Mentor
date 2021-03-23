@@ -147,7 +147,7 @@ a {
 }
 
 .main-background {
-  background: #fafafa url(images/bg-intro-desktop.svg) 630px -170px/cover no-repeat;
+  background: #fafafa url(../images/bg-intro-desktop.svg) 630px -170px/cover no-repeat;
   background-size: 1280px;
 }
 
