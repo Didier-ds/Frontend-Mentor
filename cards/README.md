@@ -9,8 +9,6 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
