@@ -52,9 +52,9 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.didiersenou.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Didier-ds)
-- Twitter - [@yourusername](https://twitter.com/DdyJiggy)
+- Website - [https://www.didiersenou.com]
+- Frontend Mentor - [https://www.frontendmentor.io/profile/Didier-ds]
+- Twitter - [https://twitter.com/DdyJiggy]
 
 
 ## Acknowledgments
