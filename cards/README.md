@@ -57,4 +57,4 @@ Users should be able to:
 
 ## Acknowledgments
 
-i acknowledge the fact that frontendmentor.io gave us newbies and 
+i acknowledge the fact that frontendmentor.io gave us newbies the opportunity to test our abilities
