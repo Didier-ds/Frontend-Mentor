@@ -77,7 +77,7 @@ nav {
   width: 100%;
   position: fixed;
   z-index: 2;
-  height: 90px;
+  height: 70px;
   padding: 0 100px;
   background-color: white;
   -webkit-box-align: center;
@@ -102,6 +102,7 @@ nav ul li {
   background: linear-gradient(to right, #31d35c, #2bb7da);
   color: white;
   padding: 15px 25px;
+  font-weight: 600;
   border-radius: 1.5em;
 }
 
@@ -172,6 +173,7 @@ a {
   background: linear-gradient(to right, #31d35c, #2bb7da);
   color: white;
   padding: 15px 25px;
+  font-weight: 600;
   border-radius: 1.5em;
 }
 
@@ -251,8 +253,12 @@ h4 {
   max-width: 330px;
   width: 24%;
   margin: 10px 0;
-  -webkit-box-shadow: 0px 0px 12px -5px #9698a6;
-          box-shadow: 0px 0px 12px -5px #9698a6;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in;
+  transition: -webkit-box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 }
@@ -266,16 +272,33 @@ h4 {
 }
 
 .articles .articleList .article-content {
-  padding: 10px 30px;
+  padding: 10px 25px;
   background-color: white;
-  min-height: 380px;
+  min-height: 250px;
+}
+
+.articles .articleList .article-content .author {
+  font-size: 13px !important;
+}
+
+.articles .articleList:hover {
+  -webkit-box-shadow: 0px 0px 12px -5px #9698a6;
+          box-shadow: 0px 0px 12px -5px #9698a6;
+}
+
+.head {
+  margin: 5px 0;
 }
 
 .head a {
-  font-size: 20px;
+  font-size: 17px;
   color: #2d314d;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
+}
+
+.passage {
+  margin: 5px 0;
 }
 
 .head a:hover {
@@ -304,19 +327,25 @@ footer {
 }
 
 .footer-logo img {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 .footer-logo a {
   color: white;
   font-size: 25px;
-  margin: 0px 2px;
+  margin: 0px 8px;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
 
-.footer-logo a:hover {
+.footer-logo a path {
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+}
+
+.footer-logo a:hover path {
   color: #31d35c;
+  fill: #31d35c;
 }
 
 .footer-content {
@@ -366,7 +395,7 @@ footer {
 @media (max-width: 1024px) {
   .list {
     text-align: center;
-    width: 350px;
+    width: 300px;
   }
   .whyChooseUs {
     margin-top: 0;
@@ -396,11 +425,8 @@ footer {
 }
 
 @media (max-width: 991px) {
-  .nav-links {
-    display: none;
-  }
-  .menu-bar, .close-bar {
-    display: block;
+  nav {
+    padding: 0 50px;
   }
 }
 
@@ -425,21 +451,27 @@ footer {
 
 @media (max-width: 768px) {
   .main-background {
-    background: url("images/bg-intro-mobile.svg") 0px 0px/contain no-repeat;
+    background: url("../images/bg-intro-mobile.svg") 0px 0px/contain no-repeat;
     background-repeat: no-repeat;
   }
   .container {
     width: 85%;
   }
+  .menu-bar, .close-bar {
+    display: block;
+  }
   nav {
     padding: 0 20px;
+  }
+  .nav-links {
+    display: none;
   }
   .footer-content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    text-align: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .whyContent {
     -ms-flex-wrap: wrap;
@@ -472,9 +504,9 @@ footer {
     width: auto;
   }
   .main-img {
-    -webkit-transform: translate(0, -150px);
-            transform: translate(0, -150px);
-    width: 300px;
+    -webkit-transform: translate(0, -270px);
+            transform: translate(0, -270px);
+    width: 650px;
   }
   .content {
     margin: -100px 0;

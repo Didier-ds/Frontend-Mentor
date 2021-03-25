@@ -74,7 +74,7 @@ nav {
     width: 100%;
     position: fixed;
     z-index: 2;
-    height: 90px;
+    height: 70px;
     padding: 0 100px;
     background-color: white;
     align-items: center;
@@ -95,7 +95,11 @@ nav {
 background: linear-gradient(to right, #31d35c, #2bb7da);
 color: white;
 padding: 15px 25px;
+font-weight: 600;
 border-radius: 1.5em;
+}
+.link:hover {
+
 }
   a {
       color: $GrayishBlue;
@@ -153,6 +157,7 @@ border-radius: 1.5em;
             background: linear-gradient(to right, $LimeGreen, $BrightCyan);
            color: $White;
            padding: 15px 25px;
+           font-weight: 600;
            border-radius: 1.5em;  
         }
     }
@@ -218,6 +223,7 @@ h4 {
     }
     
 }
+
 .articles {
     display: flex;
     justify-content: space-between;
@@ -226,10 +232,11 @@ h4 {
         max-width: 330px;
         width: 24%;
         margin: 10px 0;
-        box-shadow: 0px 0px 12px -5px $GrayishBlue;
+        box-shadow: none;
+        transition: box-shadow 0.3s ease-in;
         border-top-left-radius: 0.5em;
             border-top-right-radius: 0.5em;
-
+     
         img {
             width: 100%;
             border-top-left-radius: 0.5em;
@@ -238,19 +245,32 @@ h4 {
             min-height: 190px;
         }
         .article-content {
-            padding: 10px 30px;
+            padding: 10px 25px;
             background-color: white;
-             min-height: 380px;
+             min-height: 250px;
             
-            
+            .author {
+                        font-size: 13px !important;
+                    }
         }
     }
 }
-.head a{
-                font-size: 20px;
+.articles {
+     .articleList:hover {
+    box-shadow: 0px 0px 12px -5px $GrayishBlue;
+    }
+}
+.head {
+   margin: 5px 0;
+a{
+                font-size: 17px;
                 color: $DarkBlue;
                 transition: 0.2s ease-in;
             }
+        }
+        .passage {
+            margin: 5px 0;
+        }
 .head a:hover {
     color: $LimeGreen;
 }
@@ -265,16 +285,21 @@ footer {
     justify-content: center;
     align-items: center;
     img {
-        margin: 50px 0;
+        margin: 30px 0;
     }
     a {
         color: white;
         font-size: 25px;
-        margin: 0px 2px;
+        margin: 0px 8px;
         transition: 0.2s ease-in;
+   
     }
-    a:hover {
+    a path {
+        transition: .3s ease-in;
+    }
+    a:hover path{
         color: $LimeGreen;
+        fill: #31d35c;
     }
 }
 .footer-content {
@@ -291,6 +316,7 @@ footer {
         a {
             color: $White;
             transition: 0.2s ease-in;
+
         }
         a:hover {
             color: $LimeGreen;
@@ -314,7 +340,7 @@ footer {
     
     .list {
         text-align: center;
-        width: 350px;
+        width: 300px;
     }
     
     .whyChooseUs {
@@ -348,12 +374,10 @@ footer {
 
 //responsiveness for phone sizes of max-width(425px)
 @media(max-width: 991px){
-    .nav-links {
-        display: none;
+    nav {
+        padding:0 50px;
     }
-    .menu-bar, .close-bar {
-        display: block;
-    }
+    
 }
 @media(max-width: 425px){
     .left-side a {
@@ -371,20 +395,25 @@ footer {
 
 @media(max-width: 768px){
     .main-background {
-        background: url("images/bg-intro-mobile.svg") 0px 0px / contain no-repeat;
+        background: url("../images/bg-intro-mobile.svg") 0px 0px / contain no-repeat;
         background-repeat: no-repeat;
     }
     .container {
         width: 85%;
     }
-    
+    .menu-bar, .close-bar {
+        display: block;
+    }
     nav {
         padding: 0 20px;
     }
-    
+    .nav-links {
+        display: none;
+    }
     .footer-content {
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        text-align: center;
+        justify-content: space-around;
     }
     .whyContent {
         flex-wrap: wrap;
@@ -406,8 +435,8 @@ footer {
          width: auto;
      }
      .main-img {
-         transform: translate(0, -150px);
-         width: 300px;
+         transform: translate(0, -270px);
+         width: 650px;
      }
      
      .content {
